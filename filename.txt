@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+
+# Additional HTTP Header
+print "Content-Type:application/octet-stream; name = \"FileName\"\r\n";
+print "Content-Disposition:attachment; filename = \"FileName\"\r\n\n";
+
+# Open the target file and list down its content as follows
+open( FILE, "<FileName" );
+
+while(read(FILE, $buffer, 100)){
+   print("$buffer");
+}
+
+Hello!
